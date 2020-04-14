@@ -42,6 +42,11 @@ public class StringBaseTests {
     }
 
     @Test
+    void equalsMustReturnFalseWhenValueIsNotNullAndOtherValueIsNull() {
+        assertFalse(new StringBase("42", false, false).equals(new StringBase(null, false, false)));
+    }
+
+    @Test
     void equalsMustReturnFalseWhenCasedIsTrueOrOtherCasedIsTrueAndValueIsNotCaseSensitiveEqualToOtherValue() {
         assertFalse(new StringBase("Bob", false, true).equals(new StringBase("bob", false, false)));
         assertFalse(new StringBase("Bob", false, false).equals(new StringBase("bob", false, true)));
