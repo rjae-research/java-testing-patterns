@@ -30,3 +30,5 @@ jobs:
       run: mvn test
     - name: Mutation Test
       run: mvn org.pitest:pitest-maven:mutationCoverage
+    - name: Upload
+      run: ls -R
