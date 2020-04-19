@@ -28,3 +28,5 @@ jobs:
       run: mvn clean compile
     - name: Unit Test
       run: mvn test
+    - name: Mutation Test
+      run: mvn org.pitest:pitest-maven:mutationCoverage
